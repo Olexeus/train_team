@@ -1,0 +1,425 @@
+@import "../bourbon/bourbon"
+
+// ff4800
+$color: #4590c7 //Theme skin #ff4800
+$color_01: rgba($color, 0.1)
+$color_025: rgba($color, 0.25)
+$color_04: rgba($color, 0.4)
+$color_05: rgba($color, 0.5)
+$color_06: rgba($color, 0.6)
+$color_07: rgba($color, 0.7)
+$text_color: rgba(34, 34, 34, 1)
+$main_color: #222
+$bg_light: #FAFAFA
+$bg_li_ul: rgb(229, 229, 229)
+
+$color_2: #222222 // Black
+$hov_el_01: rgba($color_2, 0.1)
+$hov_el_025: rgba($color_2, 0.25)
+$hov_el_04: rgba($color_2, 0.4)
+$hov_el_06: rgba($color_2, 0.6)
+$hov_el_07: rgba($color_2, 0.7)
+$offline: rgba($color_2, 0.8)
+
+$color_3: #f5f9fc
+$white: $color_3
+$white_035: rgba($color_3, 0.35)
+$white_08: rgba($color_3, 0.8)
+
+$color_4: #8fa5ce // CS:GO Rank Color
+$color_4_04: rgba($color_4, 0.4)
+$color_4_06: rgba($color_4, 0.6)
+
+$color_5: #ff4700 // Dota Rank Color
+$color_5_04: rgba($color_5, 0.4)
+$color_5_06: rgba($color_5, 0.6)
+$color_5_08: rgba($color_5, 0.8)
+
+$color_6: #2f3136 // Chat color
+$color_6_04: rgba($color_6, 0.4)
+$color_6_06: rgba($color_6, 0.6)
+$color_6_08: rgba($color_6, 0.8)
+
+$red: #ff4700
+$green: #06a606
+$transparent: transparent
+$place_hol_col: #ddd
+
+// #f8632b
+$find_btn: #4590c7
+$find_btn_08: rgba($find_btn, 0.8)
+
+@mixin kerning($kerning)
+	letter-spacing: $kerning + px
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid
+	color: red
+body input:required:valid,
+body textarea:required:valid
+	color: green
+
+body
+	color: $main_color
+	+kerning(1)
+
+a
+	color: $text_color
+
+.mnu_line_btm a
+	color: $white
+	&:hover
+		color: $color
+
+p
+	color: $text_color
+
+input
+	color: $white
+	background-color: $transparent
+
+.mfp-close
+	color: $offline
+
+.color_element
+	color: $color
+.color_bg
+	background-color: $color
+.color_border
+	border-color: $color
+
+header
+	// background-color: $white
+
+.modal_content
+	background-color: #f5f9fc
+
+.loader .loader_inner
+	background-color: #fff
+
+li:hover
+	background-color: $hov_el_01
+	ul 
+		background-color: $bg_li_ul
+		li:hover
+			background-color: $hov_el_025
+
+li.prem a
+	color: $color
+li.prem:hover
+	background-color: $color_01
+
+.game_card
+	background-color: transparent
+
+.list_group_item_nickname
+	color: $white
+
+.profile ul
+	background-color: transparent !important
+	li a
+		color: $white
+
+.btn
+	background-color: $find_btn
+	color: $white
+	&:hover
+		background-color: $find_btn_08
+
+/* .chat_box .btn
+	color: $color_6 */
+
+.prof_stats .premium
+	background-color: $find_btn
+	&:hover
+		background-color: $find_btn_08
+
+.stopwatch:hover
+	background-color: $find_btn
+
+.user_stats_table
+	background-color: $hov_el_04
+	color: $white
+	.user_st_name
+		background-color: $hov_el_025
+
+select 
+	background-color: $transparent
+	option
+		color: black
+
+.on
+	color: $color
+.off
+	color: $offline
+
+#error
+	background-color: $red
+#complete
+	background-color: $green
+
+.status_print_box
+	background-color: rgba(182, 0, 0, 0.6)
+	input
+		font-size: 20px
+
+.save_btn
+	background: $find_btn
+	color: $white
+	&:hover
+		background-color: rgba(69, 144, 199, 0.65)
+
+.save_stats_btn
+	background-color: rgba(244, 0, 0, 0.6)
+	&:hover
+		background-color: rgba(244, 0, 0, 0.8)
+
+.num_box_new
+	background-color: $find_btn
+	p
+		color: $white
+	input:hover
+		background-color: $white_035
+
+.nickname a
+	color: #e0e0e0
+
+.massage p
+	color: $white
+
+.message_time 
+	background-color: $hov_el_07
+	color: $white
+
+.massage_area textarea
+	background-color: $color_6
+	color: $white
+
+.right .num_box_new .selected
+	background-color: $white_035
+
+.mates_box .chat_img p
+	color: $white
+
+.dropdown 
+	dd ul 
+		background-color: $color_4_04
+		li a:hover 
+			background-color: $color_4_06
+	dt a 
+		background-color: $color_4_04
+		//.arr_down
+		//	background-color: $color_4_04
+	dt a:hover
+		background-color: $color_4_06
+		//.arr_down
+			//background-color: $color_4_06
+	a 
+		color: rgba(54, 94, 167, 0.8)
+		&:visited 
+			color: rgba(54, 94, 167, 1)
+		&:hover 
+			color: rgba(54, 94, 167, 1)
+
+
+.mess_general 
+	background: $white_035 !important
+	div
+		color: black
+	.message_time 
+		background: $hov_el_07
+		color: $white
+
+.mess.mess_general
+	background-color: $white_035 !important
+
+.personal_mess .message_time:after
+	border-left-color: $hov_el_07
+
+.mess
+	background-color: #feefe9
+	.message_time:after
+		border-right-color: $hov_el_07
+
+.chat_timer_box
+	color: $white
+
+.mate_vol
+	background: $hov_el_04
+	color: #e8e8e8
+
+.tools_box
+	background: $color_6
+	color: #e8e8e8
+	&:hover
+		background: $color_2
+		color: #f0f0f0
+
+.mates_box
+	// background-color: $white
+	.chat_img_inner
+		background-color: $color_6
+		&:hover
+			background-color: $color_6
+	.voice_chat_act
+		background-color: transperent
+
+#message_form
+	background: $white
+
+#message_box
+	background-color: $color_6
+
+.chat_con .chat_inf_box .chat_timer_box .chat_timer
+	border-bottom-color: $color_6
+	p
+		color: $white
+
+.mates_box .chat_img a
+	color: $white
+
+.rank_title
+	color: #f5f9fc !important 
+
+.cs_go_rank_wrap
+	box-shadow: -151px 0 #272e3f, 27px 0px 0px #272e3f
+	background-color: #272e3f
+
+.dota_rank_wrap
+	box-shadow: -151px 0 #5f0909, 27px 0px 0px #5f0909
+	background-color: #5f0909
+
+#message_box
+	box-shadow: 0 0 7px 0px rgba(0, 0, 0, 0.39)
+
+.custom-option
+	color: #222
+
+.custom-options
+	border-color: #b5b5b5
+	box-shadow: 0 2px 1px rgba(0, 0, 0, 0.07)
+	background: #fff
+
+.option-hover:before
+	background: #f9f9f9
+
+span.custom-select-trigger
+	color: #fff
+	background: $find_btn
+
+.sup_form_field_wrap input
+	background: $color_04
+
+textarea#sup_question
+	border-color: #f8632b
+	background: $color_04
+	color: $white
+
+span.custom-select-trigger:hover
+	background: $color_07
+
+.sup_form_field_wrap input:focus
+	background: $color_07
+
+textarea#sup_question:focus 
+	background: $color_07
+
+.sup_form_field_wrap
+	input:hover, textarea#sup_question:hover
+		background: $color_07
+
+.pubg_rank_wrap
+	background-color: $find_btn
+
+.mode_pubg
+	background-color: rgb(116, 116, 116) !important
+
+.mode_pubg:hover
+	background-color: rgb(116, 116, 116) !important
+	box-shadow: 0px 0px 0px 4px inset #f5bc02
+	// background-color: $white_035
+
+.mode_pubg.selected
+	background-color: rgb(116, 116, 116) !important
+	box-shadow: 0px 0px 0px 4px inset #f5bc02
+	// background-color: $white_035 !important
+
+input.error
+	box-shadow: 0px 0px 3px 0px $red
+	transition: 0.3s ease
+
+textarea.error 
+	box-shadow: 0px 0px 3px 0px $red
+	transition: 0.3s ease
+
+.bar .fill
+	background: $color !important
+
+.add
+	background-color: $color
+
+.streamer
+	background-color: #4b367c
+	a
+		color: $white
+
+.streamer_description
+	background-color: #7259ab
+	.streamer_description_inner
+		color: $white
+
+
+
+
+
+
+
+
+
+
+
+.message_scroll::-webkit-scrollbar-track
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.2)
+
+.message_scroll::-webkit-scrollbar
+	width: 4px
+
+.message_scroll::-webkit-scrollbar-thumb
+	background-color: $color
+
+
+
+.scroll::-webkit-scrollbar-track
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.2)
+
+.scroll::-webkit-scrollbar
+	width: 4px
+
+.scroll::-webkit-scrollbar-thumb
+	background-color: #000
+
+
+
+
+
+
+
+
+
+
+
+::-webkit-input-placeholder  /* WebKit, Blink, Edge */
+	color: $place_hol_col
+
+::-moz-placeholder  /* Mozilla Firefox 4 to 18 */
+	color: $place_hol_col
+	opacity: 1
+
+::-moz-placeholder  /* Mozilla Firefox 19+ */
+	color: $place_hol_col
+	opacity: 1
+
+::-ms-input-placeholder  /* Internet Explorer 10-11 */
+	color: $place_hol_col
+::-ms-input-placeholder  /* Microsoft Edge */
+	color: $place_hol_col

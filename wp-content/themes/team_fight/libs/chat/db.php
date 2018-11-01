@@ -1,0 +1,1 @@
+<?php $db = new db('localhost','demopane_teamfig','M!9UY3uADC*FCCjL','demopane_teamfight');

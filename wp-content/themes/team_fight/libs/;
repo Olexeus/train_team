@@ -1,0 +1,149 @@
+(function ($) {
+
+  $.videoCall = function (callerId, roomId) {
+
+    $.magnificPopup.close();
+    var connection = new RTCMultiConnection();
+    var streamId = '';
+    var caller = '';
+
+    var muted = {
+      mic: false,
+      sound: false,
+    };
+
+    // this line is VERY_important
+    connection.socketURL = 'https://rtcmulticonnection.herokuapp.com:443/';
+
+    connection.keepStreamsOpened = false;
+
+    // if you want audio+video conferencing
+    connection.session = {
+      audio: true,
+      video: false,
+      uuu: callerId
+    };
+
+    connection.socketMessageEvent = 'audio-conference-demo';
+    connection.session = {
+      audio: true,
+      video: false
+    };
+    connection.extra = {
+      aaa: callerId
+    };
+    connection.mediaConstraints = {
+      audio: true,
+      video: false
+    };
+    connection.sdpConstraints.mandatory = {
+      OfferToReceiveAudio: true,
+      OfferToReceiveVideo: false
+    };
+    connection.audiosContainer = document.getElementById('audios-container');
+    connection.onstream = function (event) {
+      if (event.type == 'remote') {
+        console.log('remote');
+        console.log(event);
+        $('#' + event.userid).attr('streamid', event.streamid);
+        sessionStorage.setItem(event.userid, event.streamid);
+      }
+
+      if (event.userid == connection.userid) {
+        streamId = event.streamid;
+      }
+
+      var width = parseInt(connection.audiosContainer.clientWidth / 2) - 20;
+      var mediaElement = getHTMLMediaElement(event.mediaElement, {
+        title: event.userid,
+        buttons: ['full-screen'],
+        width: width,
+        showOnMouseEnter: false
+      });
+
+      connection.audiosContainer.appendChild(mediaElement);
+      setTimeout(function () {
+        mediaElement.media.play();
+      }, 5000);
+      mediaElement.id = event.streamid;
+    };
+    connection.onstreamended = function (event) {
+      var mediaElement = document.getElementById(event.streamid);
+      if (mediaElement) {
+        mediaElement.parentNode.removeChild(mediaElement);
+      }
+    };
+
+    console.log('caller', callerId);
+    connection.userid = callerId;
+    connection.openOrJoin(roomId, function() {
+      if (connection.isInitiator === true) {
+        // you opened the room
+      } else {
+        // you joined it
+      }});
+    window.aaa = connection;
+
+    $('#lVolume').on('click', function () {
+      var elem = $('i', this);
+      if (!elem) return;
+
+      if (elem.attr('class').includes('fa-volume-off')) {
+        connection.attachStreams.forEach(function (stream) {
+          stream.unmute('audio');
+        });
+        muted.sound = false;
+      } else {
+        connection.attachStreams.forEach(function (stream) {
+          stream.mute('audio');
+        });
+        muted.sound = true;
+      }
+      elem.toggleClass('fa-volume-up fa-volume-off');
+    });
+
+    $('#lMirco').on('click', function () {
+      var elem = $('i', this);
+      if (!elem) return;
+
+      if (elem.attr('class').includes('fa-microphone-slash')) {
+        connection.streamEvents[streamId].stream.unmute('audio');
+        muted.sound = false;
+      } else {
+        connection.streamEvents[streamId].stream.mute('audio');
+        muted.sound = true;
+      }
+      elem.toggleClass('fa-microphone fa-microphone-slash');
+    });
+
+
+    $('#lStop').on('click', function () {
+
+      // stop all local cameras
+      connection.attachStreams.forEach(function (localStream) {
+        localStream.stop();
+      });
+
+      // close socket.io connection
+      connection.close();
+
+    });
+
+
+    $('.remoteUser').on('click', function () {
+
+      userId = $(this).attr('id');
+      streamId = $(this).attr('streamid');
+
+      if ($(this).attr('class').includes('fa-volume-off')) {
+        connection.streamEvents[streamId].stream.unmute('audio');
+      } else {
+        connection.streamEvents[streamId].stream.mute('audio');
+      }
+      $(this).toggleClass('fa-volume-up fa-volume-off');
+    });
+
+  }
+
+}(jQuery));
+//# sourceURL=custom.js

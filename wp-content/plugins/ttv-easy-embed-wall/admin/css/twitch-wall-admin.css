@@ -1,0 +1,17 @@
+/**
+ * All of the CSS for your admin-specific functionality should be
+ * included in this file.
+ */
+
+.settings_page_twitch-tv-wall .twitch-form .radio {}
+.settings_page_twitch-tv-wall .twitch-form .error {color:red;display: inline-block;width: 100%;display:none}
+.settings_page_twitch-tv-wall .twitch-form .error.show {display:inline-block;}
+
+.settings_page_twitch-tv-wall .twitch-plugins-upsell {justify-content: center;display: flex;max-width: 1000px;margin: 0 auto;}
+.settings_page_twitch-tv-wall .twitch-plugins-upsell-item {max-width: 30%;display: inline-flex;flex-direction: column; justify-content: space-between; vertical-align: top; margin: 0 2%;}
+.settings_page_twitch-tv-wall .twitch-plugins-upsell-item img {width: 100%; height: auto;}
+.settings_page_twitch-tv-wall .twitch-plugins-upsell-item span {display: block;text-align: center;margin: 5px 0;}
+.settings_page_twitch-tv-wall .twitch-plugins-upsell-item a {display: block;width: 100%; text-align: center;}
+.settings_page_twitch-tv-wall .disabled {cursor: not-allowed;}
+.settings_page_twitch-tv-wall .upsell {color: red;}
+.settings_page_twitch-tv-wall #twitch-module {max-width: 1240px;margin: 0 auto;}

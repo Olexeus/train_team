@@ -1,0 +1,1037 @@
+@import "bourbon/bourbon"
+@charset "windows-1251"
+
+body
+	font-family: "Open Sans", sans-serif
+	font-weight: normal
+	font-size: 14px
+	min-width: 320px
+	-webkit-font-smoothing: antialised
+	line-height: 1.2
+
+.hidden
+	display: none
+
+body 
+	background-image: url("../../img/background_main.png")
+	background-attachment: fixed
+	background-size: cover
+	text-align: center
+
+img
+	max-width: 100%
+	max-height: 100%
+
+li
+	list-style: none
+
+li:hover ul
+	display: block
+
+a
+	outline: none !important
+
+input
+	width: 170px
+	outline: none
+	border: none
+	text-align: -webkit-center
+
+.mfp-content
+	width: 100%
+
+.box_elem_midd
+	align-items: center
+	display: flex
+	justify-content: center
+
+.loader
+	background: none repeat scroll 0 0 #ffffff
+	bottom: 0
+	height: 100%
+	left: 0
+	position: fixed
+	right: 0
+	top: 0
+	width: 100%
+	z-index: 9999
+	.loader_inner
+		background-image: url("../../img/preload.gif")
+		background-size: cover
+		background-repeat: no-repeat
+		background-posirion: center center
+		height: 60px
+		width: 60px
+		margin-top: -30px
+		margin-left: -30px
+		left: 50%
+		top: 50%
+		position: absolute
+
+header
+	position: absolute
+	top: 0
+	left: 0
+	right: 0
+
+.logo_box
+	height: 46px
+
+.logo
+	height: 32px
+
+.circle
+	border-radius: 100%
+
+.navbar-default
+	display: inline-block
+	float: left
+	li 
+		display: inline-block
+	ul
+		margin: 0
+		li
+			font-size: 18px
+			font-weight: 600
+			// font-family: "Tahoma"
+			padding: 12px 12px
+			margin: 0 4px
+			ul 
+				display: none
+				position: absolute
+				padding: 0
+				margin: 12px 0 0 -12px
+				z-index: 1
+				li 
+					float: none
+					margin: 0
+					img
+						margin-right: 7px
+
+.fa-circle
+	position: relative
+	padding-left: 5px
+
+.icon
+	height: 20px
+
+.steam
+	a img
+		height: 43px
+		margin-top: 2px
+		float: right
+		margin-right: 50px
+
+.profile 
+	height: 46px
+	float: right
+	padding: 1px 10px
+	cursor: pointer
+	div
+		float: left
+		height: 46px
+	.list_group_item
+		outline: none
+		.list_picture
+			.circle
+				height: 40px
+				margin: 3px 0
+		.list_content
+			.list_group_item_nickname
+				padding-left: 5px
+				font-weight: 600
+				width: 120px
+				white-space: nowrap
+				overflow: hidden
+				text-overflow: ellipsis
+				display: inline-block
+	ul 
+		display: none
+		position: absolute
+		padding: 0
+		margin: 45px 0 0 -10px
+		z-index: 11
+		width: 180px
+		li 
+			float: none
+			margin: 0
+			padding: 5px
+			.list_ul_elem
+				border: none
+				background: none
+				padding: 0
+				padding-left: 13px
+				align-items: center
+				display: flex
+				font-weight: 600
+				img
+					margin-right: 15px
+
+
+.game_box
+	height: 95vh
+
+.game_card
+	padding: 12px 9px
+	box-shadow: inset 0 0 20px black
+	margin: 0 35px
+	width: 24%
+	cursor: pointer
+	display: inline-block
+	vertical-align: middle
+	transition: 0.5s ease
+	p
+		font-size: 12px
+		font-weight: bold
+		margin: 2px
+		text-shadow: 0px 0px 0.3px #4b4b4b
+	.fa-circle
+		left: -26px
+	a 
+		outline: none
+		img
+			box-shadow: 0 0 4px #686868
+			transition: 0.2s ease
+
+.game_card:hover
+	box-shadow: inset 0 0 0px black
+	padding: 0
+	transition: 0.5s ease
+	a img
+		box-shadow: 0 0 0px #686868
+		transition: 0.2s ease
+
+.mnu_line_btm  ul li
+	padding: 0 10px
+	font-weight: 600
+	display: inline-block
+
+#wpsapButtonPopup > img
+	width: auto !important
+	height: 40px	
+	margin: 3px 0
+
+footer
+	position: absolute
+	right: 0
+	bottom: 0
+	left: 0
+	ul
+		padding: 0
+
+.modal_team_find
+	height: 100vh
+	overflow: auto
+	.modal_content
+		position: relative
+		/* overflow: hidden */
+		margin: auto
+		padding: 25px 0px 0px 
+		width: 560px
+		height: 560px
+		-webkit-animation-name: animatetop
+		-webkit-animation-duration: 0.4s
+		animation-name: animatetop
+		animation-duration: 0.4s
+		overflow-y: auto
+		.left
+			text-align: center
+			img.prof_pic
+				// height: 80px
+				// border-radius: 100%
+				height: 120px
+				border-radius: 3.5px
+			p
+				font-size: 20px
+				display: block
+				margin: 10px 0
+
+.right
+	text-align: -webkit-center
+	.num_box_new
+		display: flex
+		justify-content: flex-start
+		margin: 0 0 65px
+		height: 32px
+		box-shadow: -346px 0 rgba(248, 99, 43, 1), 28px 0 rgba(248, 99, 43, 1)
+		&_num
+			width: 100%
+		p, input
+			display: inline-block
+			font-size: 17px
+		p
+			width: 160px
+			display: flex
+			align-items: center
+			margin: 0 20px 0 35px
+		input
+			width: 32px
+			height: 32px
+	.num_box_new_num
+		width: 100%
+		right: 0
+		position: absolute
+
+.pad_0
+	padding: 0 !important
+
+.center_about
+	text-align: center
+	padding-top: 16px
+	font-weight: 900
+
+.find_box
+	font-family: "Microsoft Yi Baiti Regular"
+	text-align: -webkit-center
+	margin-top: 50px
+	margin-bottom: 30px
+	.btn
+		outline: none
+		border: none
+		padding: 0
+		width: 250px
+		font-family: "Open Sans", sans-serif
+		font-size: 20px
+		line-height: 40px
+	.cancel_btn
+		width: 140px
+		font-size: 20px
+	.search_sel
+		display: none
+		.stopwatch 
+			margin-bottom: 10px
+
+.rank_title
+	font-size: 17px !important 
+	width: 160px !important 
+	margin-right: 20px !important 
+	margin-left: 35px !important 
+	text-align: left !important
+
+
+.cs_go_rank_wrap
+	height: 82px
+	justify-content: flex-start
+	margin-top: 60px
+
+.dota_rank_wrap
+	height: 82px
+	justify-content: flex-start
+	margin-top: 60px
+
+
+.dropdown 
+	position: relative
+	margin: 14px 0
+	dd 
+		margin: 0
+		padding: 0
+		position: relative
+		z-index: 1
+		ul 
+			display: none
+			padding: 5px 0
+			position: absolute
+			min-width: 170px
+			height: 250px
+			overflow-y: scroll
+			li a 
+				padding: 5px
+				display: block
+	dt 
+		margin: 0
+		padding: 0
+		a 
+			display: block
+			width: 170px
+			height: 54px
+			span 
+				cursor: pointer
+				display: inline-block
+				vertical-align: middle
+				width: 130px
+				padding: 5px
+			.arr_down
+				background-image: url("../../img/icons/arr_down.png")
+				background-position: center
+				background-repeat: no-repeat
+				background-attachment: scroll
+				padding: 15px
+				background-size: 20px
+				width: 30px
+				display: inline-block
+				vertical-align: middle
+				transform: rotate(180deg) translateY(0%)
+				transition: transform 0.4s ease-in-out
+	ul 
+		margin: 0
+		padding: 0
+	a 
+		text-decoration: none
+		outline: none
+		&:visited 
+			text-decoration: none
+			outline: none
+	span.value 
+		display: none
+	img.rank 
+		border: none
+		vertical-align: middle
+		max-width: 110px
+	img.rank_def 
+		border: none
+		vertical-align: middle
+		max-width: 110px
+
+.dropdown dt.open a .arr_down 
+	transform: rotate(0deg) translateY(0%)
+	transition: transform 0.4s ease-in-out
+
+
+.rank_visibility 
+	display: none
+
+.dota-dropdown
+	position: relative
+	margin: 14px 0
+	dd
+		margin: 0
+		padding: 0
+		position: relative
+		z-index: 1
+		ul
+			display: none
+			background: #943c38
+			padding: 5px 0
+			position: absolute
+			min-width: 170px
+			height: 250px
+			overflow-y: scroll
+			li a
+				padding: 5px
+				display: block
+	dt
+		margin: 0
+		padding: 0
+		a
+			display: block
+			width: 170px
+			height: 54px
+			background-color: #690d09
+			box-shadow: 0px 0px 10px #400000
+			span
+				cursor: pointer
+				display: inline-block
+				vertical-align: middle
+				width: 130px
+				padding: 5px
+				margin: 4px
+				margin-right: 12px
+			.arr_down
+				position: absolute
+				display: block
+				content: ""
+				width: 10px
+				height: 10px
+				top: 50%
+				right: 15px
+				// margin-top: -3px
+				border-bottom: 3px solid #fff
+				border-right: 3px solid #fff
+				transform: rotate(45deg) translateY(-50%)
+				transition: all 0.4s ease-in-out
+				transform-origin: 50% 0
+		&.open a .arr_down
+			// margin-top: 3px
+			transform: rotate(-135deg) translateY(-50%)
+	ul
+		margin: 0
+		padding: 0
+	a
+		text-decoration: none
+		outline: none
+		color: #fff
+		&:visited
+			text-decoration: none
+			outline: none
+	span
+		&.dota-value
+			display: none
+		&.dota_rank, &.rank_def
+			border: none
+			vertical-align: middle
+			max-width: 110px
+	ul li:hover
+		background-color: rgba(60, 8, 8, 0.4)
+
+.prof_stats
+	padding: 0px 10px 10px
+	display: inline-block
+	div
+		display: flex
+		align-items: center
+
+	.prof_game_stats_box
+		margin: 10px 5px
+		display: block
+	.user_stats_table
+		text-align: center
+		td
+			height: 40px
+			width: 180px
+		.premium
+			height: 100%
+			width: 100%
+		.prof_dropdown
+			outline: none
+			select 
+				padding: .5em
+				padding-right: 2.5em
+				border: none
+				outline: none
+
+.status_print_sec
+	margin: 14px 0
+
+.status_print_box
+	display: flex
+	height: 54px
+	width: 170px
+	font-size: 16px
+	display: flex
+	align-items: center
+	position: relative
+
+.save_stats_btn
+	position: relative
+	right: 0
+	z-index: 1
+	min-width: 30px
+	width: 45px
+	height: 52px
+	cursor: pointer
+	// background-image: url("../../img/icons/apply.svg")
+	background-repeat: no-repeat
+	background-position: center
+	background-size: 25px 25px
+
+.massage
+	p
+		padding: 10px
+		border-radius: 3px
+	#error
+		display: none
+	#complete
+		display: none
+
+.save_btn
+	width: 170px
+	height: 40px
+	margin: 10px 0 0
+	border: none
+	outline: none
+
+
+.chat_box
+	width: 75%
+	position: relative
+	text-align: left
+	.btn
+		display: inline-block
+		height: 36px
+		width: 100px
+		padding: 0
+
+#message_form
+	position: relative
+	z-index: 10
+	.float_left 
+		width: 100%
+		.massage_area
+			width: 100%
+
+.massage_area textarea
+	width: 100%
+	height: 36px
+	margin: 0px
+	border: none
+	border-top: rgba(0, 0, 0, 0.2) solid 2px
+	outline: none
+	display: flex
+	padding-left: 10px
+	text-align: left
+	line-height: 2
+	resize: none
+
+.clearfix:after 
+	clear: both
+	content: "."
+	display: block
+	font-size: 0
+	height: 0
+	line-height: 0
+	visibility: hidden
+
+.mess_general
+	position: relative
+	display: flex
+	align-items: center
+	max-width: 300px
+	margin: 2px 0px !important
+	padding: 6px
+	.message_time 
+		position: absolute
+		font-size: 12px
+		padding: 5px
+		border-radius: 3px
+		display: none
+		&:after
+			bottom: 26%
+			border: solid transparent
+			content: " "
+			height: 0
+			width: 0
+			position: absolute
+			pointer-events: none
+			border-width: 6px
+	&:hover .message_time 
+		display: block
+
+.personal_mess
+	float: right
+	//border-radius: 12px 12px 2px
+	.message_time 
+		left: -55px
+		&:after
+			left: 100%
+
+.mess
+	float: left
+	//border-radius: 12px 12px 12px 2px
+	.message_time 
+		right: -55px
+		&:after
+			right: 100%
+
+.chat_con
+	height: 95vh
+	display: block
+	text-align: -webkit-center
+	text-align: -o-center
+	text-align: -moz-center
+	.chat_inf_box 
+		position: relative
+		padding-top: 30px
+		margin-top: 100px
+		.chat_timer_box
+			display: flex
+			position: absolute
+			justify-content: center
+			width: 100%
+			top: 0
+			margin: 0 !important
+			.chat_timer
+				border-bottom-width: 30px
+				border-bottom-style: solid
+				border-left: 20px solid transparent
+				border-right: 20px solid transparent
+				height: 0
+				p
+					position: relative
+					top: 0px
+					font-size: 13px
+					line-height: 30px
+					padding: 0 12px
+					margin: 0
+
+.mate_img_box
+	display: inline-block
+	position: relative
+	padding: 0 4px 0 6px
+	&:hover .mate_vol
+		display: flex
+
+.mate_vol
+	display: none
+	align-items: center
+	justify-content: center
+	position: absolute
+	top: 0
+	width: 58px
+	height: 58px
+	font-size: 25px
+	cursor: pointer
+
+.tools_box
+	display: flex
+	align-items: center
+	justify-content: center
+	float: left
+	margin: 0
+	width: 70px
+	height: 50px
+	border-radius: 0
+	font-size: 25px
+	&:hover
+		cursor: pointer
+
+.chat_team_box
+	display: flex
+	justify-content: center
+	position: relative
+	z-index: 10
+
+.mates_box
+	display: inline-block
+	text-align: right
+	position: absolute
+	left: 0
+	z-index: 1
+	.chat_img 
+		padding: 0
+		width: 210px
+		position: relative
+		left: -70px
+		transition: 0.5s ease
+		text-align: left
+		img
+			height: 58px
+			display: inline-block
+			border-radius: 2px
+		p
+			width: 120px
+			display: inline-block
+			text-overflow: ellipsis
+			overflow: hidden
+			vertical-align: middle
+		a
+			display: inline-block
+			margin: 0
+			text-overflow: ellipsis
+			overflow: hidden
+			position: absolute
+			top: 10px
+			left: 75px
+			width: 120px
+		.add
+			top: auto !important
+			left: auto !important
+			width: fit-content
+			padding: 2px
+			font-size: 10px
+		.slider-container
+			position: absolute !important
+			left: 75px !important
+			top: 32px !important
+			padding: 0 !important
+			width: 120px !important
+			.bar 
+				height: 10px !important
+				width: 100% !important
+				.circle
+					top: 1px !important
+					height: 12px !important
+					width: 12px !important
+			span
+				display: none !important
+		.chat_img_inner
+			padding: 6px 15px 6px 0	
+		&:hover
+			left: -100%
+			transition: 0.5s ease
+	.voice_chat_act 
+		position: relative
+		left: -70px
+		transition: 0.5s ease
+		justify-content: flex-end
+		.fa-cog
+			opacity: 1
+			transition: 0.5s ease
+		#lSetting
+			opacity: 1
+			transition: 0.5s ease
+		&:hover
+			left: -100%
+			#lSetting
+				opacity: 0
+				width: 0
+				transition: 0.5s ease
+				.fa-cog
+					opacity: 0
+					transition: 0.3s ease
+
+.desc_text
+	text-align: left
+	h2
+		font-size: 24px
+		padding-left: 40px
+	ul li
+		list-style-type: none
+	
+
+#message_box
+	height: 60vh
+	padding: 5px 50px
+	overflow-y: scroll
+	position: relative
+	z-index: 10
+
+
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button 
+	-webkit-appearance: none
+	margin: 0
+
+input[type="number"] 
+	-moz-appearance: textfield
+
+
+
+
+@-webkit-keyframes animatetop
+	from
+		top: -300px
+		opacity: 0
+	to
+		top: 0
+		opacity: 1
+
+
+@keyframes animatetop
+	from
+		top: -300px
+		opacity: 0
+	to
+		top: 0
+		opacity: 1
+
+
+.sup_form_option
+	display: block
+
+form.sup_form
+	text-align: left
+	padding: 0 40px
+
+.custom-select.opened
+
+.custom-option
+	position: relative
+	display: block
+	padding: 0 20px
+	border-bottom: 1px solid #b5b5b5
+	font-size: 14px
+	font-weight: 500
+	line-height: 36px
+	cursor: pointer
+	transition: all .4s ease-in-out
+
+.custom-options
+	position: absolute
+	display: block
+	top: 100%
+	left: 0
+	right: 0
+	min-width: 100%
+	margin: 15px 0
+	border-size: 1px
+	border-style: solid
+	border-radius: 1px
+	box-sizing: border-box
+	transition: all .4s ease-in-out
+	opacity: 0
+	visibility: hidden
+	pointer-events: none
+	transform: translateY(-15px)
+
+.custom-select.opened .custom-options
+	opacity: 1
+	visibility: visible
+	pointer-events: all
+	transform: translateY(0)
+
+.custom-select-wrapper
+	position: relative
+	display: inline-block
+	user-select: none
+	select
+		display: none
+
+select#sup_type
+
+.custom-select
+	position: relative
+	display: inline-block
+
+span.custom-select-trigger
+	position: relative
+	display: block
+	width: auto
+	padding: 0 59px 0 18px
+	font-size: 14px
+	font-weight: 300
+	line-height: 36px
+	border-radius: 1px
+	cursor: pointer
+	margin-top: 15px
+	transition: .3s ease
+	&:after
+		position: absolute
+		display: block
+		content: ''
+		width: 10px
+		height: 10px
+		top: 50%
+		right: 25px
+		margin-top: -3px
+		border-bottom: 1px solid #fff
+		border-right: 1px solid #fff
+		transform: rotate(45deg) translateY(-50%)
+		transition: all .4s ease-in-out
+		transform-origin: 50% 0
+
+.custom-select.opened .custom-select-trigger:after
+	margin-top: 3px
+	transform: rotate(-135deg) translateY(-50%)
+
+.custom-option
+	&:first-of-type
+		border-radius: 4px 4px 0 0
+	&:last-of-type
+		border-bottom: 0
+		border-radius: 0 0 4px 4px
+	&:hover, &.selection
+		background: #f9f9f9
+
+.sup_form_field_wrap
+	margin-top: 15px
+	input
+		line-height: 30px
+		border-radius: 1px
+		border-width: 0
+		border-style: solid
+		display: inline-block
+		width: 100%
+		text-align: left
+		transition: .3s ease
+		padding: 0 5px
+
+.sup_form
+	submit
+		border: none
+	#sup_submit
+		border: none
+		margin-top: 15px
+		font-size: 14px
+		outline: none
+		transition: .3s ease
+
+textarea#sup_question
+	line-height: 30px
+	border-radius: 1px
+	border-width: 0
+	border-style: solid
+	width: 100%
+	resize: none
+	outline: none
+	padding: 0 5px
+	transition: .3s ease
+
+.sup_form_label
+	margin-bottom: 4px
+	font-size: 14px
+
+span.custom-select-trigger:hover
+	transition: .3s ease
+
+.sup_form_field_wrap
+	input:hover, textarea#sup_question:hover
+		transition: .3s ease
+
+.mode_pubg  
+	height: 82px
+	width: 50%
+	font-size: 24px
+	text-transform: capitalize
+
+.pubg_rank_wrap
+	height: 82px
+	justify-content: start !important
+	margin-top: 60px
+
+.rank_select_wrap
+	position: absolute
+	width: 100%
+	right: 0
+
+.streamer
+	height: 40px
+	width: 480px !important
+
+
+.streamer_description
+	width: 480px !important
+	height: 0 !important
+	opacity: 0 !important
+	transition: 0.8s ease
+	padding: 0
+	display: flex
+	justify-content: center
+	align-items: center
+
+.streamer_wrapper:hover > .streamer_description
+	height: 100% !important
+	opacity: 1 !important
+	transition: 0.8s ease !important
+	padding: 15px 30px
+	.streamer_description_inner
+		font-size: 14px 
+		transition: 0.4s ease !important
+
+
+.streamer_inner
+	height: 40px
+	width: 480px !important
+	display: flex
+	justify-content: center
+	align-items: center
+
+.streamer_description_inner
+	text-align: left
+	font-size: 0px
+	transition: 0.4s ease !important
+
+button.btn_supp 
+	outline: none
+	border: none
+	width: 360px
+	font-size: 20px
+	line-height: 20px
+	background-color: rgba(34, 34, 34, 0.55)
+
+button.btn_supp:hover
+	background-color: rgba(34, 34, 34, 0.4)
+
+
+#supp_text
+	transition: 0.8s ease !important
+	max-height: 0
+	opacity: 0 !important
+	overflow: hidden
+	li
+		transition: 0.8s ease !important
+		max-height: 0
+		opacity: 0 !important
+		overflow: hidden
+
+#supp_title:hover > #supp_text
+	transition: 0.8s ease !important
+	max-height: 500px
+	opacity: 1 !important
+	overflow: hidden
+	li
+		transition: 0.8s ease !important
+		max-height: 300px
+		opacity: 1 !important
+		overflow: hidden
